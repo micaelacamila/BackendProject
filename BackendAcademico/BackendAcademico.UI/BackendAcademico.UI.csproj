@@ -13,7 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BackendAcademico.Application\BackendAcademico.Application.csproj" />
     <ProjectReference Include="..\BackendAcademico.Domain\BackendAcademico.Domain.csproj" />
-    <ProjectReference Include="..\BackendAcademico.Infrastructure2\BackendAcademico.Infrastructure.csproj" />
+    <ProjectReference Include="..\BackendAcademico.Infrastructure\BackendAcademico.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
