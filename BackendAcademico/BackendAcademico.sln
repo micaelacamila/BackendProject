@@ -5,11 +5,9 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackendAcademico.UI", "BackendAcademico.UI\BackendAcademico.UI.csproj", "{34E23AAD-EE33-47A6-8775-7CA22937E726}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendAcademico.Infrastructure", "BackendAcademico.Infrastructure2\BackendAcademico.Infrastructure.csproj", "{0DF7E5E3-F3BC-482B-861D-948A3E1CEFDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackendAcademico.Application", "BackendAcademico.Application\BackendAcademico.Application.csproj", "{10F0A521-E245-4052-8E33-C3AE300F2E6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendAcademico.Application", "BackendAcademico.Application\BackendAcademico.Application.csproj", "{10F0A521-E245-4052-8E33-C3AE300F2E6D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendAcademico.Domain", "BackendAcademico.Domain\BackendAcademico.Domain.csproj", "{D0C20869-BD82-4AFC-96A3-892AB145A9B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackendAcademico.Domain", "BackendAcademico.Domain\BackendAcademico.Domain.csproj", "{D0C20869-BD82-4AFC-96A3-892AB145A9B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		{34E23AAD-EE33-47A6-8775-7CA22937E726}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34E23AAD-EE33-47A6-8775-7CA22937E726}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34E23AAD-EE33-47A6-8775-7CA22937E726}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0DF7E5E3-F3BC-482B-861D-948A3E1CEFDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0DF7E5E3-F3BC-482B-861D-948A3E1CEFDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0DF7E5E3-F3BC-482B-861D-948A3E1CEFDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0DF7E5E3-F3BC-482B-861D-948A3E1CEFDE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{10F0A521-E245-4052-8E33-C3AE300F2E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{10F0A521-E245-4052-8E33-C3AE300F2E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10F0A521-E245-4052-8E33-C3AE300F2E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
