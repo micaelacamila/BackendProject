@@ -1,3 +1,5 @@
+using BackendAcademico.Application.Services;
+using BackendAcademico.Domain.Interfaces;
 using BackendAcademico.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
@@ -7,7 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddTransient<IEstudianteService, EstudianteService>();
+builder.Services.AddTransient<IInscripcionService, InscripcionService>();
+builder.Services.AddTransient<IMateriaService, MateriasService>();
+builder.Services.AddTransient<IAcademicoRepository, BackendAcademicoRepository>();
 
+builder.Services.AddAutoMapper(typeof(AutomapperProfile));
 builder.Services.AddDbContext<BackendAcademicoDBContext>(options =>
 {
     options.UseMySql(builder.Configuration.GetConnectionString("AcademicoDB"),
