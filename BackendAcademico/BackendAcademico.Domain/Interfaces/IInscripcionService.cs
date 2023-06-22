@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BackendAcademico.Domain.Interfaces
 {
-    internal interface IInscripcionService
+    public interface IInscripcionService
     {
     }
 }

@@ -8,10 +8,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BackendAcademico.Domain\BackendAcademico.Domain.csproj" />
+    <ProjectReference Include="..\BackendAcademico.Infrastructure\BackendAcademico.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
   </ItemGroup>
 
 </Project>
