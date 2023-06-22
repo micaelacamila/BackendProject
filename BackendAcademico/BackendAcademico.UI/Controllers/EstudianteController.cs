@@ -1,4 +1,5 @@
-﻿using BackendAcademico.Domain.Interfaces;
+﻿using BackendAcademico.Application.Services;
+using BackendAcademico.Domain.Interfaces;
 using BackendAcademico.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,6 +25,19 @@ namespace BackendAcademico.UI.Controllers
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "Sorry, something unexpected happened");
             }
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetEstudiantes()
+        {
+            try
+            {
+                var estudiantes = await _estudianteService.GetAllEstudiantesAsync();
+                return Ok(estudiantes);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Sorry, something unexpected happened");
+            }   
         }
     }
 
