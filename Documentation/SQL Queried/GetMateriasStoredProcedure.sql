@@ -1,0 +1,8 @@
+DELIMITER //
+
+CREATE PROCEDURE GetMaterias()
+BEGIN
+    SELECT * FROM materia;
+END //
+
+DELIMITER ;

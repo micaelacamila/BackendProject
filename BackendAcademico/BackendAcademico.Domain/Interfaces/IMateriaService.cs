@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BackendAcademico.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace BackendAcademico.Domain.Interfaces
 {
     public interface IMateriaService
     {
+        Task<IEnumerable<MateriaModel>> GetMateriasAsync();
     }
 }

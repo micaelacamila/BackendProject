@@ -60,9 +60,9 @@ namespace BackendAcademico.Infrastructure.Data
         }
 
         //Materia
-        public Task<IEnumerable<MateriaEntity>> GetMaterias()
+        public async Task<IEnumerable<MateriaEntity>> GetMaterias()
         {
-            throw new NotImplementedException();
+            return await _dbContext.GetMateriasFromDb();
         }
 
         public Task<MateriaEntity> GetMateria(int id)

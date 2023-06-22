@@ -41,6 +41,10 @@ namespace BackendAcademico.Infrastructure.Data
         {
             return await Estudiantes.FromSqlRaw("CALL GetEstudiantes").ToListAsync();
         }
+        public async Task<List<MateriaEntity>> GetMateriasFromDb()
+        {
+            return await Materias.FromSqlRaw("CALL GetMaterias").ToListAsync();
+        }
     }
 }
 

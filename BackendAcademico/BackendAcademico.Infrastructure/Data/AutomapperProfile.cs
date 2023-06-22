@@ -14,7 +14,6 @@ namespace BackendAcademico.Infrastructure.Data
         public AutomapperProfile()
         {
             this.CreateMap<EstudianteEntity, EstudianteModel>()
-                //.ForMember( des => des.Phone, opt => opt.MapFrom(src => src.Phone + "#" + src.Name ))
                 .ReverseMap();
             this.CreateMap<MateriaEntity,MateriaModel>()
                 .ReverseMap();
