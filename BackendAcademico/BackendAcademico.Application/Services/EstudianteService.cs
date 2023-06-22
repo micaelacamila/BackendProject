@@ -33,9 +33,10 @@ namespace BackendAcademico.Application.Services
             throw new Exception("Database Error.");
         }
 
-        public Task<IEnumerable<EstudianteModel>> GetAllEstuditesAsync()
+        public async Task<IEnumerable<EstudianteModel>> GetAllEstudiantesAsync()
         {
-            throw new NotImplementedException();
+            var estudiantesEntity= await _academicoRepository.GetEstudiantes();
+            return _mapper.Map<IEnumerable<EstudianteModel>>(estudiantesEntity);
         }
 
         public Task<EstudianteModel> GetEstudianteAsync(int id)

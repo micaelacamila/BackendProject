@@ -36,8 +36,10 @@ namespace BackendAcademico.Infrastructure.Data
             builder.Entity<InscripcionEntity>().Property(i => i.Id_Inscripcion).ValueGeneratedOnAdd();
             builder.Entity<InscripcionEntity>().HasOne(i => i.Estudiante).WithMany(e => e.Inscripciones);
             builder.Entity<InscripcionEntity>().HasOne(i => i.Materia).WithMany(e => e.Inscripciones);
-
-
+        }
+        public async Task<List<EstudianteEntity>> GetEstudiantesFromDb()
+        {
+            return await Estudiantes.FromSqlRaw("CALL GetEstudiantes").ToListAsync();
         }
     }
 }

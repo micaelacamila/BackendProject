@@ -17,6 +17,9 @@ namespace BackendAcademico.Infrastructure.Data
         {
             _dbContext= dBContext;
         }
+
+        //Estudiante 
+
         public async Task<int> CreateEstudiante(EstudianteEntity estudiante)
         {
             var existingStudent = await GetStudentByUniqueValuesAsync(estudiante.Nombres, estudiante.Apellidos, estudiante.CI, estudiante.Fecha_Nacimiento);
@@ -45,18 +48,26 @@ namespace BackendAcademico.Infrastructure.Data
             s.Nombres == name || s.Apellidos == lastName || s.CI == ci || s.Fecha_Nacimiento==birthDate);
         }
 
-        public async Task<bool> SaveChangesAsync()
-        {
-            try
-            {
-                var result = await _dbContext.SaveChangesAsync();
-                return result > 0 ? true : false;
 
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+        public async Task<IEnumerable<EstudianteEntity>> GetEstudiantes()
+        {
+            return await _dbContext.GetEstudiantesFromDb();
+        }
+
+        public Task<EstudianteEntity> GetEstudiante(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        //Materia
+        public Task<IEnumerable<MateriaEntity>> GetMaterias()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<MateriaEntity> GetMateria(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -11,8 +11,11 @@ namespace BackendAcademico.Domain.Interfaces
     {
         //Estudiantes
         Task<int> CreateEstudiante(EstudianteEntity estudiante);
+        Task<IEnumerable<EstudianteEntity>> GetEstudiantes();
+        Task<EstudianteEntity> GetEstudiante(int id);
 
-        //DB
-        Task<bool> SaveChangesAsync();
+        //Materias
+        Task<IEnumerable<MateriaEntity>> GetMaterias();
+        Task<MateriaEntity> GetMateria(int id);
     }
 }

@@ -12,7 +12,7 @@ namespace BackendAcademico.Domain.Interfaces
     {
         Task<EstudianteModel> CreateEstudianteAsync();
         Task<EstudianteModel> GetEstudianteAsync(int id);
-        Task<IEnumerable<EstudianteModel>> GetAllEstuditesAsync();
+        Task<IEnumerable<EstudianteModel>> GetAllEstudiantesAsync();
 
 
     }
