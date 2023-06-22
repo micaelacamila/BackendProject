@@ -1,8 +1,24 @@
+using BackendAcademico.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+builder.Services.AddDbContext<BackendAcademicoDBContext>(options =>
+{
+    options.UseMySql(builder.Configuration.GetConnectionString("AcademicoDB"),
+        new MariaDbServerVersion(new Version(10, 5)), optionsAction =>
+        {
+            optionsAction.SchemaBehavior(MySqlSchemaBehavior.Ignore);
+            optionsAction.MigrationsAssembly(typeof(Program).Assembly.FullName);
+        });
+});
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
