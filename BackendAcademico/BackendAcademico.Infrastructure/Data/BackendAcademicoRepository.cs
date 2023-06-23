@@ -100,7 +100,8 @@ namespace BackendAcademico.Infrastructure.Data
 
         public async Task<IEnumerable<InscripcionEntity>> GetInscripcions()
         {
-            return await _dbContext.GetInscripcionesFromDb();
+            //return await _dbContext.GetInscripcionesFromDb();
+            return await _dbContext.Inscripciones.ToListAsync();
         }
 
         public async Task UpdateInscripcion(int inscripcionId, InscripcionEntity inscripcion)
