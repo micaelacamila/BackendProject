@@ -17,5 +17,15 @@ namespace BackendAcademico.Domain.Interfaces
         //Materias
         Task<IEnumerable<MateriaEntity>> GetMaterias();
         Task<MateriaEntity> GetMateria(int id);
+
+        //Inscripcion
+        Task<int> CreateInscripcion(InscripcionEntity inscripcion);
+        Task<InscripcionEntity> GetInscripcionEntity(int id);
+        Task<IEnumerable<InscripcionEntity>> GetInscripcions();
+        Task UpdateInscripcion(int inscripcion, InscripcionEntity inscripcionEntity);
+        Task DeleteInscripcion(int id);
+
+        //BD
+        Task<bool> SaveChangesAsync();
     }
 }

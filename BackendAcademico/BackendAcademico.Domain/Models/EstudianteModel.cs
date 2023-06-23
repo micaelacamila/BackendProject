@@ -12,13 +12,13 @@ namespace BackendAcademico.Domain.Models
     {
         public int Id_Estudiante { get; set; }
         [MaxLength(7)]
-        [Required]
+       // [Required]
         public string CI { get; set; }
-        [Required]
+        //[Required]
         public string Nombres { get; set; }
-        [Required]
+        //[Required]
         public string Apellidos { get; set; }
-        [Required]
+        //[Required]
         public DateTime Fecha_Nacimiento { get; set; }
         public IEnumerable<InscripcionModel> Inscripciones { get; set; }
 

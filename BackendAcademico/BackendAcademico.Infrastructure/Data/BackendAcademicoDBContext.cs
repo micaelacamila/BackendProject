@@ -13,7 +13,7 @@ namespace BackendAcademico.Infrastructure.Data
     {
         public DbSet<EstudianteEntity> Estudiantes { get; set; }
         public DbSet<MateriaEntity> Materias { get; set; }
-        public DbSet<InscripcionEntity> InscripcionEntities { get; set; }
+        public DbSet<InscripcionEntity> Inscripciones { get; set; }
        
         public BackendAcademicoDBContext(DbContextOptions<BackendAcademicoDBContext> options) : base(options)
         {
@@ -44,6 +44,10 @@ namespace BackendAcademico.Infrastructure.Data
         public async Task<List<MateriaEntity>> GetMateriasFromDb()
         {
             return await Materias.FromSqlRaw("CALL GetMaterias").ToListAsync();
+        }
+        public async Task<List<InscripcionEntity>> GetInscripcionesFromDb()
+        {
+            return await Inscripciones.FromSqlRaw("CALL GetInscripciones").ToListAsync();
         }
     }
 }
